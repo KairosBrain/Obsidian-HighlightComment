@@ -1,5 +1,6 @@
 import { setIcon } from "obsidian";
-import { HighlightInfo, CommentItem } from '../types';
+import { HighlightInfo } from '../types';
+import { CommentItem } from '../CommentStore';
 import { AIManager } from './AIManager';
 import { HighlightManager } from './HighlightManager';
 import { CommentManager } from './CommentManager';
@@ -36,7 +37,7 @@ export class UIRenderer {
         if (highlightsToRender.length === 0) {
             highlightContainer.createEl("div", {
                 cls: "highlight-empty-state",
-                text: this.containerEl.querySelector('.highlight-search-input')?.value.trim()
+                text: (this.containerEl.querySelector('.highlight-search-input') as HTMLInputElement)?.value.trim()
                     ? "没有找到匹配的内容"
                     : "当前文档没有高亮内容"
             });

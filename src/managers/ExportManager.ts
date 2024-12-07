@@ -1,5 +1,6 @@
 import { Notice, App } from "obsidian";
-import { HighlightInfo, CommentItem } from '../types';
+import { HighlightInfo } from '../types';
+import { CommentItem } from '../CommentStore';
 import { ExportPreviewModal } from '../ExportModal';
 import type { default as Html2Canvas } from 'html2canvas';
 
